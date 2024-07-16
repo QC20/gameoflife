@@ -1,9 +1,13 @@
 var canvas = document.createElement("canvas"),
   c = canvas.getContext("2d");
-var w = canvas.width = window.innerWidth,
-  h = canvas.height = window.innerHeight;
+var headerHeight = document.querySelector("header").offsetHeight;
+var footerHeight = document.querySelector("footer").offsetHeight;
 
-document.body.appendChild(canvas);
+var w = canvas.width = window.innerWidth,
+  h = canvas.height = window.innerHeight - headerHeight - footerHeight;
+
+
+document.querySelector("main").appendChild(canvas);
 
 var woh = Math.floor(h/8),
     size = h/woh,
