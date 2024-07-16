@@ -21,18 +21,24 @@ document.querySelector("main").appendChild(canvas);
 // Rules object, you can change here for personalization
 const rules = {
   min: 2,
-  max: 3,
-  cells: 8
+  max: 3, 
+  cells: 8 
 };
 
 // World object
 const world = {
-  height: Math.floor(canvasDimensions.height / rules.cells), 
-  size: canvasDimensions.height / Math.floor(canvasDimensions.height / 8),
-  width: Math.floor(canvasDimensions.width / (canvasDimensions.height / Math.floor(canvasDimensions.height / 8))),
+  height: 0, 
+  size: 0,
+  width: 0,
   asum: [],
   grid: []
 };
+
+// Set world
+world.height = Math.floor(canvasDimensions.height / rules.cells);
+world.size = Math.floor(canvasDimensions.height / world.height);
+world.width = Math.floor(canvasDimensions.width / world.size);
+
 
 console.log(world.height, world.width);
 
