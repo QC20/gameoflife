@@ -18,15 +18,16 @@ canvas.height = canvasDimensions.height;
 // Append canvas to main element
 document.querySelector("main").appendChild(canvas);
 
-// Rules object
+// Rules object, you can change here for personalization
 const rules = {
   min: 2,
-  max: 3
+  max: 3,
+  cells: 8
 };
 
 // World object
 const world = {
-  height: Math.floor(canvasDimensions.height / 8),
+  height: Math.floor(canvasDimensions.height / rules.cells), 
   size: canvasDimensions.height / Math.floor(canvasDimensions.height / 8),
   width: Math.floor(canvasDimensions.width / (canvasDimensions.height / Math.floor(canvasDimensions.height / 8))),
   asum: [],
