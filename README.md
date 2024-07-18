@@ -39,10 +39,10 @@ In this implementation:
 
 ## Customization
 
-You can easily modify the game parameters by adjusting the following variables:
+You can easily modify the game parameters by adjusting the following rules:
 
-- `woh`: Controls the number of cells vertically
-- `min` and `max`: Determine the rules for cell survival and reproduction
+- `rules.cells`: Controls the number of cells vertically
+- `rules.min` and `rules.max`: Determine the rules for cell survival and reproduction
 
 ## Performance
 
